@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap");
+:root {
+  --purple-color: #552583; /* Purple */
+  --yellow-color: #fdb927; /* Yellow */
+  --white-color: #fefefe;
+  --black-color: #1e1e1e;
+}
+.head-train {
+  height: 100%;
+  width: 100%;
+  /* background: red; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.head-train div {
+  height: 70%;
+  width: 70%;
+  /* background: yellow; */
+  /* margin: 2rem; */
+}
+.ad-1 {
+  height: 50%;
+  width: 100%;
+  /* background: purple; */
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.ad-1-img img {
+  height: 100%;
+  width: 100%;
+  border-radius: 5px;
+  /* background: #e0e0e0; */
+  box-shadow: 5px 5px 7px #c1c1c1, -5px -5px 7px #ffffff;
+}
+
+.ad-1-img video {
+  height: 100%;
+  width: 100%;
+  border-radius: 5px;
+  /* background: #e0e0e0; */
+  box-shadow: 5px 5px 7px #c1c1c1, -5px -5px 7px #ffffff;
+  object-fit: cover;
+}
+.ad-1-content {
+  height: 50%;
+  width: 100%;
+  background: var(--yellow-color);
+
+  text-align: center;
+
+  border-radius: 5px;
+  /* background: #e0e0e0; */
+  box-shadow: 5px 5px 7px #c1c1c1, -5px -5px 7px #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.ad-1-content p {
+  text-align: center;
+  color: var(--purple-color);
+}
+
+.ad-1-content span {
+  font-size: 2rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  color: var(--purple-color);
+}
+
+.head-name {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  font-size: 2rem;
+  color: var(--purple-color);
+}
+
+.shoot {
+  /* background: red; */
+  height: 20% !important;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-top: 1rem;
+  align-items: center;
+}
+.shoot span {
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: 600;
+}

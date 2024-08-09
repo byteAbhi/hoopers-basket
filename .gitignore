@@ -1,0 +1,17 @@
+#enviroment 
+.env
+#node modules
+node_modules/
+#emojji
+emoji
+#Demo Text
+txt
+#data
+data.json
+#demo html file
+demo.html
+# Local Netlify folder
+.netlify
+
+#razorpay credential
+razorpay.js

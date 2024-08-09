@@ -1,0 +1,67 @@
+<%- include('./nav') %>
+<link rel="stylesheet" href="css/regForm.css" />
+<section>
+  <div class="form-back">
+    <!-- <img src="img/regbackground.avif" alt="" /> -->
+    <form action="" class="card" id="myForm">
+      <div class="reg-head">lets go</div>
+      <div class="reg-input">
+        <div class="input-loop">
+          <label for="name">college Name:</label> <br />
+          <input type="text" placeholder="college Name:" required />
+        </div>
+        <div class="input-loop">
+          <label for="name">Coach Name:</label> <br />
+          <input type="text" placeholder="Full Name:" required />
+        </div>
+        <div class="input-loop">
+          <label for="name">captain name:</label> <br />
+          <input type="text" placeholder="Full name:" required />
+        </div>
+        <div class="input-loop">
+          <label for="name">captain number:</label> <br />
+          <input
+            type="tel"
+            placeholder="xxxxx xxxxx"
+            pattern="[0-9]{5} [0-9]{5}"
+            required
+          />
+        </div>
+        <div class="input-loop">
+          <label for="name">vice-captain name:</label> <br />
+          <input type="text" placeholder="vice-captain name:" required />
+        </div>
+        <div class="input-loop">
+          <label for="name">vice-captain number:</label> <br />
+          <input
+            type="tel"
+            placeholder="xxxxx xxxxx"
+            pattern="[0-9]{5} [0-9]{5}"
+            required
+          />
+        </div>
+        <div class="input-loop">
+          <label for="name">Registeration fees</label> <br />
+          <h3>₹ 1399/-</h3>
+        </div>
+        <div class="input-loop">
+          <label for="name">upload receipt</label> <br />
+          <input type="file" required />
+        </div>
+      </div>
+      <div class="reg-submit">
+        <button type="submit" id="submitButton">register Now</button>
+      </div>
+    </form>
+  </div>
+</section>
+<!-- The Modal -->
+<div id="successModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>Registration successful!</p>
+  </div>
+</div>
+
+<%- include('./about') %>
+<script src="js/regForm.js"></script>

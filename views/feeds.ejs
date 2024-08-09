@@ -1,0 +1,74 @@
+<!-- navbar -->
+<%- include('./nav') %>
+<link rel="stylesheet" href="css/feeds.css" />
+
+<div class="prd-crd">
+  <% for(let i = 0; i < feeds.length; i+=3) { %>
+  <div class="row">
+    <% for(let j = i; j < Math.min(i + 3, feeds.length); j++) { %>
+    <div class="card">
+      <img src="feed/<%= feeds[j].fphoto %> " alt="Product Image" />
+      <div class="content">
+        <div class="product-brand"><%= feeds[j].fhead %></div>
+        <div class="product-name"><%= feeds[j].fwrite %></div>
+        <div class="card-footer">
+          <div class="like">
+            <button class="btn like-btn" onclick="toggleLike()">
+              <i class="fa-solid fa-thumbs-up"></i>
+            </button>
+            <span id="like-count">0</span>
+          </div>
+          <div class="dislike">
+            <button class="btn dislike-btn" onclick="toggleDislike()">
+              <i class="fa-solid fa-thumbs-down"></i>
+            </button>
+            <span id="dislike-count">0</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <% } %>
+  </div>
+  <% } %>
+</div>
+
+<!-- add feeds -->
+
+<div class="back-feed">
+  <div class="feed-add">
+    <i class="fa-solid fa-plus" onclick="toggleForm()"></i>
+    <form
+      action="/feedForm"
+      method="post"
+      id="myForm"
+      enctype="multipart/form-data"
+    >
+      <h2>add feed</h2>
+      <label for="Heading">Photos:</label>
+      <input type="file" id="photo" name="fphoto" required /><br /><br />
+      <label for="Heading">Heading:</label>
+      <input
+        class="input"
+        type="text"
+        name="head"
+        id="head"
+        placeholder="Heading"
+        required
+      /><br /><br />
+      <label for="Heading">Blog/Feed:</label>
+      <input
+        class="input"
+        type="text"
+        placeholder="Write..."
+        name="content"
+        id="content"
+      /><br /><br />
+
+      <button type="submit" class="sub">Submit</button>
+    </form>
+  </div>
+</div>
+
+<script src="js/feeds.js"></script>
+<!-- about us -->
+<%- include('./about') %>

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>H🏀🏀PERS</title>
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- jquery slick pluggin -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"
+    integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"
+    integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <!--  Header section starts here -->
+  <!-- navbar -->
+  <nav>
+    <img src="img/logo.jpeg" alt="Logo" />
+    <ul id="nav-items">
+      <li>
+        <b><a href="/">Home</a></b>
+      </li>
+      <li>
+        <b><a href="/login">Store</a></b>
+      </li>
+      <li>
+        <b><a href="/login">tournaments</a></b>
+      </li>
+      <li>
+        <b><a href="/login">Feed</a></b>
+      </li>
+      <li class="dropdown">
+        <button onclick="toggleDropdown()" class="dropdown-toggle">More</button>
+        <div id="dropdown-menu" class="dropdown-menu">
+          <a href="/login">Training</a>
+  
+          <a href="/login">scoreboard</a>
+        </div>
+      </li>
+  
+      <li class="dropdown">
+        <button onclick="toggleDropdownAcc()" class="dropdown-toggleAcc">
+          <a href="/login"> <i class="fa-solid fa-circle-user fa-xl"></i></a>
+        </button>
+        <div id="dropdown-acc" class="dropdown-acc"></div>
+      </li>
+    </ul>
+  </nav>
+
+<!-- main title -->
+<div class="main-tlt">
+  <div class="line">
+    <span>🏃run</span>
+  </div>
+  <div class="line">
+    <span>🤾‍♂️Play</span>
+  </div>
+  <div class="line">
+    <span>🏀Hoop</span>
+  </div>
+</div>
+
+  <!-- home section -->
+  <div class="main">
+
+    <div class="ot-slider">
+      <div class="slider ">
+        <div class="b-img">
+          <img src="img/POR_LAL_0820.jpg" alt="Bulls" style="border-radius: 15px;">
+        </div>
+
+        <div class="b-img">
+          <img
+            src="https://media.nbcconnecticut.com/2023/02/victor-wembanyama-7-foot-5.jpg?quality=85&strip=all&fit=1920%2C1080"
+            alt="Lakers">
+        </div>
+
+        <div class="b-img">
+          <video autoplay loop muted
+            src="vid/Cinematic Sports Video Basketball Shoot on RED LA Clippers Edit @mathiskinny8361.mp4"
+            type="video/mp4" alt="">
+        </div>
+        <div class="b-img">
+          <img src="img/img0.jpg" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Highlight section -->
+  <div class="snd-section">
+    <div class="snd-txt">
+      <span> Highlight </span>
+    </div>
+    <div class="HighL-snd">
+<div class="up">
+      <div class="slider-for slide">
+        <div class="for">
+          <video autoplay loop  
+          src="vid/highlight01.mp4"
+          type="video/mp4" alt="" controls> </video>
+        </div> 
+
+        <div class="for">
+          <video autoplay loop controls
+            src="vid/hightlight02.mp4"
+            type="video/mp4" alt=""></video>
+        </div>
+
+        <div class="for">
+          <video autoplay loop controls
+            src="vid/highlight03.mp4"
+            type="video/mp4" alt="">
+        </div>
+
+        <div class="for">
+          <video autoplay loop controls
+            src="vid/highlight04.mp4"
+            type="video/mp4" alt="">
+        </div>
+      </div>
+    </div>
+   <div class="down">
+      <div class="slider-nav  n-slide">
+        <div class="nav">
+          <img src="img/thumnail/nail01.jpg" alt="Bulls">
+        </div>
+
+        <div class="nav">
+          <img src="img/thumnail/nail02.jpg" alt="Bulls">
+        </div>
+
+        <div class="nav">
+          <img src="img/thumnail/nail03.jpg" alt="Bulls">
+        </div>
+
+
+        <div class="nav">
+          <img src="img/thumnail/nail04.jpg" alt="Bulls">
+        </div>
+
+        
+
+       
+      </div>
+    </div> 
+
+    </div>
+
+  </div>
+
+  <!-- Players info -->
+  <section id="third">
+    <div class="t-plyr">
+      <h1>TOP PLAYERS</h1>
+    </div>
+    <div class="flx-div">
+      <div class="plyr-sec">
+
+        <div class="box-out">
+          <img src="img/player/image4.png" alt="" class="box">
+          <h3>Lebron James</h3>
+        </div>
+        <div class="box-out">
+          <img src="img/player/image5.png" alt="" class="box">
+          <h3>Stephen Curry</h3>
+        </div>
+        <div class="box-out">
+          <img src="img/player/image6.png" alt="" class="box">
+          <h3>Jayson Tatum</h3>
+        </div>
+        <div class="box-out">
+          <img src="img/player/image7.png" alt="" class="box">
+          <h3>Giannis Antetokounmpo</h3>
+        </div>
+        <div class="box-out">
+          <img src="img/player/image8.png" alt="" class="box">
+          <h3>Anthony Davis</h3>
+        </div>
+        <div class="box-out">
+          <img src="img/player/image9.png" alt="" class="box">
+          <h3>Kevin Durant</h3>
+        </div>
+        <div class="box-out">
+          <img src="img/player/image10.png" alt="" class="box">
+          <h3>Joel Embiid</h3>
+        </div>
+        <div class="box-out">
+          <img src="img/player/image11.png" alt="" class="box">
+          <h3>Shai Gilgeous-Alexander</h3>
+        </div>
+        <div class="box-out">
+          <img src="img/player/image12.png" alt="" class="box">
+          <h3>Kyrie Irving</h3>
+        </div>
+
+
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- About us -->
+    <%- include('./about') %>
+  <!-- jquery js file -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+    integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+    </script>
+
+  <!-- jquery slick pluggin -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
+    integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <!-- gsap js file -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+    integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <!-- gsap scroller pluggin -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+    integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="js/script.js"></script>
+  <script src="js/jquery.js"></script>
+  <script src="js/gsap.js"></script>
+</body>
+
+</html>

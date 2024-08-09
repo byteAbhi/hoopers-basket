@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <link rel="stylesheet" href="css/tournament.css" />
+  </head>
+  <body>
+    <!-- navbar -->
+    <%- include('./nav') %>
+
+
+    <!-- <h1>Image Gallery</h1>
+    <div class="image-container">
+        <% images.forEach(image => { %>
+          <img src="<%= imageFolder + '/' + image %>" alt="<%= image %>">
+        <% }); %>
+    </div> -->
+    <!-- back button -->
+    <div class="back-icn">
+      <div class="b-btn">
+        <a href="/"><i class="fa-solid fa-arrow-left"></i></a>
+      </div>
+    </div>
+
+ 
+    <!-- <img src="img/1712022550613-Screenshot from 2023-11-19 18-50-04.png" alt="Uploaded Photo"> -->
+    <!-- <img src="images/1712022550613-Screenshot from 2023-11-19 18-50-04.png" alt="Uploaded Photo"> -->
+
+    <!-- upcoming tournaments -->
+
+    <div class="wrapper">
+      <div class="up-come">
+        <h2>Upcoming Events</h2>
+      </div>
+     
+      <div class="center-slider">
+        <% for(let i = 0; i < images.length; i+=3) { %>
+          <% for(let j = i; j < Math.min(i + 3, images.length); j++) { %>
+          <div class="cntr-cnt">
+              
+                  <div class="img-box">
+                      <img src="<%= imageFolder + '/' + images[j] %>" alt="<%= images[j] %>">
+                      <button class="button2"><a href="/regForm"> register</a></button>
+                  </div>
+              
+          </div>
+          <% } %>
+          <% } %>
+        
+        
+    </div>
+
+    <!-- registeration events -->
+    <div class="reg-head"> 
+      <h2>collaboration</h2>
+    </div>
+    <div class="reg">
+      <div class="reg-info">
+        <div class="line-1">
+          <span class="sec-1"
+            >Unlock synergy, Upload tournaments and brochures free.</span
+          >
+        </div>
+        <div class="line-1">
+          <span class="sec-2">Let's collaborate seamlessly!</span>
+        </div>
+      </div>
+      <div class="reg-form">
+        <form action="/event" method="post" enctype="multipart/form-data" class="login_form" >
+          <h1>Welcome back!</h1>
+          <p>Register your event</p>
+          <input
+            type="text"
+            placeholder="Event Name"
+            name="eventName"
+            id="eventName"
+            required
+          />
+          <input
+            type="text"
+            id="owner"
+            placeholder="Owner"
+            name="owner"
+            required
+          />
+          <input
+            id="photo"
+            type="file"
+            placeholder="Brochure"
+            name="photo"
+            required
+          />
+          <button  class="trigger">Register</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- our offers -->
+    <div class="offers-head">
+      <h2>our offers</h2>
+    </div>
+    <div class="img-area">
+      <div class="single-img">
+        <img src="img/management_team.jpg" alt="Avatar" class="image" />
+        <div class="img-overlay">
+          <div class="text">Basketball <br /><span>Management Team</span></div>
+        </div>
+      </div>
+      <div class="single-img">
+        <img src="img/event_manage.jpg" alt="Avatar" class="image" />
+        <div class="img-overlay">
+          <div class="text">Basketball<br /><span>Event Management</span></div>
+        </div>
+      </div>
+      <div class="single-img adjst">
+        <img src="img/sponsorship.jpg" alt="Avatar" class="image" />
+        <div class="img-overlay">
+          <div class="text">Basketball<br /><span>Spnosors</span></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Custom JavaScript -->
+
+
+    <!-- about us  -->
+    <%- include('./about') %>
+    <!-- js files -->
+    <%- include('./js') %>
+
+    <script src="js/tournament.js"></script>
+  </body>
+</html>

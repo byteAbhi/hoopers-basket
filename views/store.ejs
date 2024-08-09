@@ -1,0 +1,103 @@
+<link rel="stylesheet" href="css/store.css" />
+
+<!-- navbar -->
+<%- include('./nav') %>
+
+<!-- store ad head -->
+
+<div class="store-out">
+  <div class="slider-container">
+    <div class="slide">
+      <div class="sale-cont">
+        <h1>Gear up for victory!</h1>
+        <p>Own the court in style with our basketball jersey</p>
+        <button><a href="#renderedDiv" id="shp">Shop Now</a></button>
+      </div>
+
+      <img
+        src="https://live.staticflickr.com/8244/8647038734_dc4e15829f_b.jpg"
+        alt="Image 1"
+      />
+    </div>
+    <div class="slide">
+      <div class="sale-cont" id="df-cont">
+        <h1>top quality</h1>
+        <h3>product and equipments</h3>
+        <button><a href="#renderedDiv" id="shp">Shop Now</a></button>
+      </div>
+      <img
+        src="https://www.pitch.co.uk/wp-content/uploads/2021/03/TOP-10-NBA_STORE_IMG-103-1920x1080.jpg"
+        alt="Image 2"
+      />
+    </div>
+    <div class="slide">
+      <div class="sale-cont">
+        <h1>sale</h1>
+        <h1>flat 20% off</h1>
+        <p>basketball clothing & gear</p>
+        <button><a href="#renderedDiv" id="shp">Shop Now</a></button>
+      </div>
+      <img
+        src="https://ld-magento.template-help.com/magento_64903/pub/media/wysiwyg/slider-3.jpg"
+        alt="Image 3"
+      />
+    </div>
+  </div>
+</div>
+
+<!-- auto rendering dots -->
+<div class="dots-container">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+</div>
+
+<!-- product card  -->
+<div class="prd-crd" id="renderedDiv">
+  <% for(let i = 0; i < store.length; i+=3) { %>
+  <div class="row">
+    <% for(let j = i; j < Math.min(i + 3, store.length); j++) { %>
+    <div class="card" data-id="<%= store[j].id %>">
+      <div class="pro-img">
+        <img src="<%= store[j].img %>" alt="Product Image" />
+      </div>
+      <div class="content">
+        <div class="product-brand"><%= store[j].brand %></div>
+        <div class="product-name"><%= store[j].name %></div>
+        <div class="price">₹ <%= store[j].price %></div>
+        <button
+          class="pro-btn"
+          id="payButton"
+          onclick="animateButton()"
+          data-amount="<%= store[j].price %>"
+        >
+          <span>Buy</span>
+        </button>
+      </div>
+    </div>
+    <% } %>
+  </div>
+  <% } %>
+</div>
+
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script src="js/razorpay.js"></script>
+
+<!-- jquery js file -->
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+  integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+></script>
+
+<!-- store js -->
+<script src="js/store.js"></script>
+
+<!-- <img src="" alt="Product Image" /> -->
+<!-- <ul>
+      <% store.forEach(es => { %>
+      <img src="<%= es.img %>" alt="productimg" />
+      <li><%= es.name %> - <%= es.price %></li>
+      <% }); %>
+    </ul> -->
